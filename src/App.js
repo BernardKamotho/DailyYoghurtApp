@@ -7,6 +7,7 @@ import Signin from './components/Signin';
 import Signup from './components/Signup';
 import Navbar from './components/Navbar';
 import Addproducts from './components/Addproducts';
+import Aboutus from './components/Aboutus';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
               <Route path='/signin' element={<Signin/>}/>
               <Route path='/signup' element={<Signup/>}/>
               <Route path='/addproducts' element={<Addproducts/>}/>
+              <Route path='/aboutus' element={<Aboutus/>}/>
             </Routes>
           </div>
         </Router>

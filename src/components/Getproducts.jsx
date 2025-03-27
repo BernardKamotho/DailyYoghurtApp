@@ -35,19 +35,40 @@ const Getproducts = () => {
        getproducts()
     }, []); // empty dependency array ensures this runs only once when the component mounts
 
+     // Filtered products based on search
+     const [search, setSearch] = useState("");
+
+     const filtered_products = products.filter((item) =>
+       item.product_name.toLowerCase().includes(search.toLowerCase()) ||
+       item.product_description.toLowerCase().includes(search.toLowerCase()) 
+
+    );
+   
+   
+
     return (
         
     <div className="row">
         <ImageCarousel/>
 
          <h3 className="mt-1 text-danger ">Available Yoghurts</h3>
+         <div className="row justify-content-center mt-3 mb-3">
+        <input
+          className="form-control w-50"
+          type="search"
+          placeholder="Search Products..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        
+    </div>
 
         {/* Bind Error Messages */}
           {loading}
           {error}
 
         {/* Map over products and display them */}
-        {products.map((product) => (
+        {filtered_products.map((product) => (
             <div className="col-md-3 justify-content-center mb-3">
                 {/* Card with equal size */}
                 <div className="card shadow card-margin">
