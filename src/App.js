@@ -8,6 +8,7 @@ import Signup from './components/Signup';
 import Navbar from './components/Navbar';
 import Addproducts from './components/Addproducts';
 import Aboutus from './components/Aboutus';
+import Notfound from './components/Notfound';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
               <Route path='/signup' element={<Signup/>}/>
               <Route path='/addproducts' element={<Addproducts/>}/>
               <Route path='/aboutus' element={<Aboutus/>}/>
+              <Route path='/*' element={<Notfound/>}/>
             </Routes>
           </div>
         </Router>
