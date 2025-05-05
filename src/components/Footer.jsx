@@ -25,7 +25,13 @@ const Footer = () => {
                 <a href="https://instagram.com">
                 <img src="images/instagram.jpg" alt="" className="socialspictures"/>
                 </a>
-                <p className="text-dark"> Nutritious dairy products made by fermenting milk with beneficial bacteria. They come in various flavors, textures, and consistencies, from thick Greek yogurt to drinkable varieties. Rich in probiotics, proteins, and calcium, yoghurts promote gut health, boost immunity, and aid digestion. They can be enjoyed plain, sweetened, or mixed with fruits, nuts, and honey.</p>
+                <video
+      src="videos/secondvideo.mp4"
+      autoPlay
+      muted
+      loop
+      className="w-100 mt-4"
+    ></video>
             </div>
         </section>
         <footer className="text-white text-center p-2 mt-2 bootom-footer">

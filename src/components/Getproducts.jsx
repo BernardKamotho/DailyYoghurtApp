@@ -111,6 +111,8 @@ const Getproducts = () => {
         </div>
       )}
 
+     
+
       <Footer />
     </div>
   );

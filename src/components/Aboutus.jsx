@@ -9,7 +9,13 @@ const Aboutus = () => {
 
         <div className="col-md-6">
             <div className="card shadow p-4 m-3">
-                <img src="images/team.jpg" alt="our team" />
+            <video
+      src="videos/yogo.mp4"
+      autoPlay
+      muted
+      loop
+      className="w-100"
+    ></video>
             </div>
         </div>
         <div className="col-md-6 justify-content-start">
