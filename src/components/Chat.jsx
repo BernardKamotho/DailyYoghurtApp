@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import Footer from './Footer';
 
 const ChatBot = () => {
-  const [messages, setMessages] = useState([{ sender: 'bot', text: "Hi, I am your Helper. Type 'quit' to end the conversation." }]);
+  const [messages, setMessages] = useState([
+    { sender: 'bot', text: "Hi, I am your Helper. Type 'quit' to end the conversation." },
+  ]);
   const [input, setInput] = useState('');
 
   const pairs = [
@@ -48,27 +51,47 @@ const ChatBot = () => {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto bg-white shadow-md rounded-md">
-      <h2 className="text-xl font-bold mb-2">Helper ChatBot</h2>
-      <div className="h-64 overflow-y-auto border p-2 mb-2">
-        {messages.map((msg, idx) => (
-          <div key={idx} className={`mb-1 ${msg.sender === 'user' ? 'text-right' : 'text-left'}`}>
-            <span className={`inline-block px-3 py-1 rounded-md ${msg.sender === 'user' ? 'bg-blue-100' : 'bg-gray-200'}`}>
-              {msg.text}
-            </span>
+    <div className="minee">
+        <div className="container mt-4">
+      <div className="card shadow">
+        <div className="card-body">
+          <h5 className="card-title">Helper ChatBot</h5>
+          <div className="border p-2 mb-3" style={{ height: '300px', overflowY: 'auto' }}>
+            {messages.map((msg, idx) => (
+              <div
+                key={idx}
+                className={`d-flex mb-2 ${msg.sender === 'user' ? 'justify-content-end' : 'justify-content-start'}`}
+              >
+                <div
+                  className={`p-2 rounded ${
+                    msg.sender === 'user' ? 'bg-primary text-white' : 'bg-light text-dark'
+                  }`}
+                  style={{ maxWidth: '75%' }}
+                >
+                  {msg.text}
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+          <form onSubmit={handleSubmit} className="d-flex gap-2">
+            <input
+              type="text"
+              className="form-control"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="Type a message..."
+            />
+            <button className="btn btn-primary" type="submit">
+              Send
+            </button>
+          </form>
+        </div>
       </div>
-      <form onSubmit={handleSubmit} className="flex gap-2">
-        <input
-          className="flex-1 border rounded px-2 py-1"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Type a message..."
-        />
-        <button className="bg-blue-500 text-white px-3 py-1 rounded" type="submit">Send</button>
-      </form>
+     
     </div>
+    <Footer/>
+    </div>
+    
   );
 };
 
