@@ -25,7 +25,7 @@ const Footer = () => {
                 <a href="https://instagram.com">
                 <img src="images/instagram.jpg" alt="" className="socialspictures"/>
                 </a>
-                <video
+        <video
       src="videos/secondvideo.mp4"
       autoPlay
       muted

@@ -54,7 +54,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="row justify-content-center mt-4">
+    <div className="row justify-content-center mt-4 mybcgcontainer">
 
       <div className="col-md-6 card shadow p-4">
             

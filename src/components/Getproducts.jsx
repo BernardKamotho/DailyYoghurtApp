@@ -45,12 +45,12 @@ const Getproducts = () => {
   const changePage = (pageNum) => setCurrentPage(pageNum);
 
   return (
-    <div className="container mt-4">
+      <div className="container mt-4 ">
       <ImageCarousel />
 
       <h3 className="mt-4 text-danger">Available Yoghurts</h3>
 
-      <div className="row justify-content-center mt-3 mb-3">
+      <div className="row justify-content-center mt-3 mb-3 \">
         <input
           className="form-control w-50"
           type="search"
