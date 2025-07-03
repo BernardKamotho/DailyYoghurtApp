@@ -10,6 +10,7 @@ import Addproducts from './components/Addproducts';
 import Aboutus from './components/Aboutus';
 import Notfound from './components/Notfound';
 import Chat from './components/Chat';
+import Makepayment from './components/Makepayments';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
               <Route path='/signup' element={<Signup/>}/>
               <Route path='/addproducts' element={<Addproducts/>}/>
               <Route path='/aboutus' element={<Aboutus/>}/>
+              <Route path='/makepayment' element={<Makepayment />} />
               <Route path='/chat' element={<Chat/>}/>
               <Route path='/*' element={<Notfound/>}/>
             </Routes>
